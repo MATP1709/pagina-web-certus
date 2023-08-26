@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <title>CompuServicePeru-Acerca de nosotros</title>
-    <meta charset="utf-8"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>COMPUSERVICEPERÚ</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/stylefh.css">
     <link rel="stylesheet" href="css/font/flaticon.css">
+
+
 </head>
-<body >
+<body >   
+
     <header class="encabezado-pagina"> 
         <section class="header-icons-container">
             <div class="icons">
@@ -51,71 +56,83 @@
             </div>
         </section>
         
-    </header>    
-    
-    <main >
-    <div class="container">    
-            <h1>Nosotros</h1>
-            <aside>
-                <h3 ><center>Nuestro proposito:</center></h3> 
-                <hr>
-                <div class="aviso">
-                <p>Aqui podras conocer mas acerca de nosotros, nuestros objetivos y como nos organizamos para poder llevar a cabo una tienda virtual de componentes electronicos ya sea para dispositivos moviles o computadoras.</p>
-                </div>
-            </aside>
-        <section class=".section">
-            <article>
-                <h2 class="titulonosotros">Nuestra Vision</h2>
-                <div class="parrafonostros">
-                    <p>Ser una empresa líder en desarrollo de tecnologías de última generación a nivel nacional e internacional adaptándonos a los cambios y nuevas condiciones de mercado y a las nuevas demandas y necesidades de nuestros clientes.</p>
-                </div>
-            </article>
-            <BR>
-            <HR>
-            <BR>    
-            <article>
-                <h2 class="titulonosotros">Nuestra Mision</h2>
-                <div class="parrafonostros">
-                    <p>Proporcionar las tecnologías más innovadoras a medida de las necesidades empresariales, con el objetivo de incrementar su competitividad y productividad.</p>
-                </div>
-            </article>
-            <BR>
-                <HR>
-                <BR>
-        </section>
+    </header>
 
-        <section class=".section">
-            <article>
-                <h2 class="titulonosotros">Nosotros somos profesionales</h2>
-                <img src="fotos/imagen1.jpg">
-                <img src="fotos/imagen2.jpg">
-                <img src="fotos/imagen3.jpg">
-            </article>
-            <BR>
-                <HR>
-                <BR>
-        </section>
+    <!--FIN DE HEADER-->
+
+    <main >        	
+
+        <section  >		
+            <div class="container">
+                <h2>Bienvenido, por favor inicie sesión!</h2>        
+            
+                <div class="row">
+                    <div class="col">
+                        <div class="titulonosotros"><strong>Nuevo Cliente</strong></div>
+                        <div class="row">
+                        <div class="aviso">Al crear una cuenta en nuestro sitio web, podrá comprar
+                            más rápido, estar actualizado sobre el estado de un pedido y realizar un seguimiento de los pedidos que
+                            haber ha realizado previamente.</div>
+                        </div>    
+                        <br>
+                        <br>
+                        <div class="row">
+                            <div class="col"></div>    
+                            <div class="col"><button  style="border-radius: 15%;"  type="button" id="register" class="btn-primary" 
+                                onclick="location.href='registro.html'"
+                                >Registrese</button></div>    
+                            <div class="col"></div>    
+                        </div>
+
+                        
+
+                    </div><!-- col -->
+                    <div class="col">              
+                        <form id="form" class="form-empresa" method="post" action="carrito.html"  >
+                            <div class="titulonosotros"><strong>Soy Cliente</strong></div>
+                            
+                            <div class="row" style="padding-right: 10px;">
+                                <label for="Email">Correo:</label> 
+                                <input  type="email"  id="Email" name="Email" placeholder="Correo electrónico" >                                 
+                            </div> 
+                            <div class="row" style="padding-right: 10px;">
+                                <label for="Password">Contraseña:</label> 
+                                <input type="password" id="Password" name="Password" placeholder="Contraseña" >                                 
+                            </div>
+                            <div class="row">    
+                                <div class="col" style="align-content:flex-end;" >
+                                <input type="checkbox" 
+                                        id="RememberMe" name="RememberMe" value="false" >
+                                </div>        
+                                <div class="col" style="align-content:flex-start;" >          
+                                        <label for="RememberMe">¿Recuérdame?</label>
+                                </div>                                    
+                                <div class="col">
+                                    <span class="forgot-password"> <a href="recuperapassword.html">Olvidó ¿contraseña?</a> </span>
+                                </div>    
+                            </div>    
+                            <span id="mensaje_error" class="mensaje_error"></span>
+                            <div class="row" >
+                                <div class="col"></div>    
+                                <div class="col"style="padding:10px; margin: 10px;" ><button style="border-radius: 15%;" type="submit" id="iniciar" class="btn-primary"   > Inicia sesión </button></div>    
+                                <div class="col"></div>    
+                            </div>
+                        </form>
+                  
+                    </div><!-- col -->
+                </div><!-- row -->
+            </div>
         
-        <section>
-            <article>
-                <div class="parrafonostros">
-                    <h3>También realizamos servicio de reparacion de computadoras a domicilio</h3>
-                </div>
-                <img src="fotos/imagen4.jpg" width="300">
-                <img src="fotos/imagen5.jpg" width="230">
-                <img src="fotos/imagen6.jpg" width="270">
-                <br>
-                
-            </article>
-        </section>
-    </div><!-- container --> 
-    
+
+        </div>
+    </section><!-- Login  -->
     <div class="whatsapp-boton">
         <a href="https://wa.me/941349964?text=Este%20es%20el%20exámen%20final%20CERTUS" target="_blank">
             <img class="whatsappboton" src="img/icono.png" alt="">
         </a>
     </div>
-</main>
+    </main>
+    <!--INICIO DE FOOTER-->
     <footer class="pie-pagina"> <!--Encapsulamos todo lo que se pondra en el footer-->
         <div class="grupo-1">
             <div class="box">
@@ -142,12 +159,16 @@
                     <a href="video/compluplaza.mp4" target="_blank" ><span class="fab fa-youtube"></span></a>
                 </div>
             </div>  
+    
+    
+    
+    
         </div>
         <div class="grupo-2">
             <small>&copy; 2023 <b>COMPUSERVICEPERÚ</b> - Todos los Derechos Reservados</small>
         </div>
     </footer>
-        
+    <!--FIN DE FOOTER-->
         <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -159,5 +180,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+
+        
+        
+        <script async type="text/javascript" src="js/validacion.js"></script>
 </body>
+
 </html>

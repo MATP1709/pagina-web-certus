@@ -21,10 +21,18 @@
     <header class="encabezado-pagina"> 
         <section class="header-icons-container">
             <div class="icons">
-                <a href="#"><span class="fab fa-facebook-f"></span></a>                
-                <a href="#"><span class="fab fa-instagram"></span></a>
-                <a href="#"><span class="fab fa-whatsapp"></span></a>
-                <a href="#"><span class="fab fa-youtube"></span></a>
+                <div>  
+                    <a href="registro.html"><span class="fa fa-pencil-square-o"></span></a>  
+                    <h6>Registrate</h6>
+                </div>              
+                <div >
+                    <a href="login.html"><span class="fa fa-user-circle"></span></a>     
+                    <h6 >Ingresar</h6>
+                </div>
+                <div>   
+                    <a href="#"><span class="fa fa-cart-arrow-down"></span></a> 
+                    <h6>Carrito</h6>
+                </div>                     
             </div>
         </section>        
         <section class="back">
@@ -63,15 +71,19 @@
 					<form id="form" class="form-empresa">
 						<div>
 							<input type="text"  id="nombre" name="nombre" placeholder="Nombre completo" >
+                            <span id="nombre_error" class="mensaje_error"></span>
 						</div>
 						<div>
 							<input type="email" id="email" name="email" placeholder="Correo electrónico" >
+                            <span id="email_error" class="mensaje_error"></span>
 						</div> 
 						<div>
 							<input type="text" id="asunto" name="asunto" placeholder="Indique el Asunto" >
+                            <span id="asunto_error" class="mensaje_error"></span>
 						</div>
 						<div>
 							<textarea rows="6" id="mensaje" name="mensaje" placeholder="Escriba su mensaje o comentario" ></textarea>
+                            <span id="mensaje_error" class="mensaje_error"></span>
 						</div>
 						<div>
                             <input type="submit" id="button" class="enviar" value="Enviar mensaje" >							                            
@@ -98,6 +110,11 @@
 			</ul>			
         </div>
 	</section><!-- contactenos -->
+    <div class="whatsapp-boton">
+        <a href="https://wa.me/941349964?text=Este%20es%20el%20exámen%20final%20CERTUS" target="_blank">
+            <img class="whatsappboton" src="img/icono.png" alt="">
+        </a>
+    </div>
     </main>
     <!--INICIO DE FOOTER-->
     <footer class="pie-pagina"> <!--Encapsulamos todo lo que se pondra en el footer-->
@@ -120,12 +137,12 @@
             <div class="box">
                 <h2>Siguenos</h2>
                 <div class="red-social">
-                    <img src="img/facebook.png" alt="">
-                    <img src="img/instagram.png" alt="">
-                    <img src="img/whatsapp.png" alt="">
-                    <img src="img/youtube.png" alt="">
+                    <a href="#"><span class="fab fa-facebook-f"></span></a>                
+                    <a href="#"><span class="fab fa-instagram"></span></a>
+                    <a href="https://wa.me/941349964?text=Este%20es%20el%20exámen%20final%20CERTUS" target="_blank"><span class="fab fa-whatsapp"></span></a>
+                    <a href="video/compluplaza.mp4" target="_blank" ><span class="fab fa-youtube"></span></a>
                 </div>
-            </div>
+            </div>  
     
     
     

@@ -7,6 +7,7 @@
 body{
     background-color: rgb(3, 18, 32);
 }
+
 .form-register{
  width: 400px;
  background-color: #24303c;
@@ -70,7 +71,7 @@ body{
 .form-register .boton-switch p{
     text-align: center;
     align-items: center;
-    font-size: 13px;
+    font-size: 12.3px;
     display: flex; /*por defecto flex lo ve en fila*/
     justify-content: space-between; /* para mandar a los elementos a los lados*/
     margin: auto;

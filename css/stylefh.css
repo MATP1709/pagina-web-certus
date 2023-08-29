@@ -16,6 +16,11 @@ body {
         font-family: Arial, Helvetica, sans-serif;
 }*/
 /*HEADER*/
+
+.contenedor{
+    max-width: 100%;
+    margin: 0 auto;
+}
 .encabezado-pagina{
     width: 100%;
     background: linear-gradient(
@@ -29,45 +34,47 @@ body {
 
 }
 
-.contenedor{
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-
 .back{
-    padding: 32px 0;
+    padding: 45px 0;
+    background: linear-gradient(
+        90deg,
+        rgba(36, 48, 60) 25%,
+        rgb(30, 55, 82) 73%
+     );
 }
-
 
 .menu{    
  position: absolute; 
- top: 25px;
- left: 20px;
+ top: 30px;
+ left: 50px;
  right: 0;
  display: flex; /*para colocar los elementos en forma horizontal */
  align-items: center;
  justify-content: space-between; /*para que se coloque espacios*/
- /*z-index: 1000;*/ /*para que este sobre cualquier elemento*/
- margin-right: 40px;
+ z-index: 1000; /*para que este sobre cualquier elemento*/
+ text-align: center;
 }
+
+
 
 .logo{
     font-size: 24px;
     color: rgb(66, 155, 238);
     font-weight: 800; /*para el grosor de las letras*/
     text-transform: uppercase; /*para que el contenido este en mayusculas*/
+    text-decoration: none; /**/
 }
 
 .menu .navbar ul li{
     position: relative;
-    float: left;
+    float: left; /*para que los enlaces se pongan a la izquierda*/
 }
 
 .menu .navbar ul li a{
  font-size: 18px;
  padding: 20px;
  color: azure;
+ text-decoration: none;
  display: block; /*para que el padding pueda aplicarse correctame*/
 }
 
@@ -89,7 +96,30 @@ body {
     display: none;
 }
 /*para realizar efectos visuales si se habre por una app -- RESPONSIVE*/
-@media (max-width:800px) {
+
+@media (max-width:1200px){
+    .logo{
+        font-size: 18px;
+    }
+    .menu .navbar ul li a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width:1100px){
+    .logo{
+        font-size: 18px;
+    }
+    .menu .navbar ul li a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width:900px) {
+    .logo{
+        font-size: 18px;
+    }
+
     .menu{
         padding: 30px;
     }
@@ -97,31 +127,32 @@ body {
         display: initial;
     }
     .back{
-        padding: 47px 0;
+        padding: 45px 0px;
     }
-    .menu .navbar{
+    .menu .navbar{ /*solo editamos a todos los contenidos dentro del div*/
         position: absolute;
         top: 100%;
-        left: 0;
-        right: 0;
-        background-color: #0D4F97;
-        z-index: 800;
+        left: 0px;
+        right: 0px;
+        text-align: center;
+        background-color: #24303c;
+        z-index: 700;
         display: none; /*para que momentariamente no se vea el menu*/
     }
 
-    .menu .navbar ul li {
+    .menu .navbar ul li { /*modificamos los que estan dentro del div ul - li*/
         width: 100%; /*para que este en forma de columna*/
     }
-    #menu:checked ~ .navbar{
+    .menu .navbar ul li a{ /*modificamos a los textos que estan dentro de ul li*/
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    #menu:checked ~ .navbar{ /*se active el desplegable del menu*/ 
         display: initial;
     }
 }
-
 /*HEADER FIN*/
-
-
-
-
 
 /*PIE DE PAGINA FOOTER*/
 .pie-pagina{ /*Pondremos un color al fondo*/
@@ -219,7 +250,6 @@ color: azure;
 .pie-pagina .grupo-2 small{
     font-size: 15px;
 }
-
 
 @media (max-width:800px) {
     .pie-pagina .grupo-1{

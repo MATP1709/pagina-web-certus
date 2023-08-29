@@ -59,6 +59,7 @@ header .header-icons-container {
         rgba(36, 48, 60) 25%,
         rgb(30, 55, 82) 73%);
 }
+
 header .header-icons-container .icons {    
     width: 200px;
     height: auto;
@@ -73,7 +74,7 @@ header .header-icons-container .icons {
 
 header .header-icons-container .icons h6 {    
     background-color: var(--dark2);    
-    text-align: center ;
+    text-align: center;
     border-radius: 5px;    
     padding: 5px 0;    
     font-size: 1.1rem;   
@@ -85,7 +86,9 @@ header .header-icons-container .icons h6 {
 .icons>div:hover h6 { 
     transform: translate(0px, 0px);
     opacity: 1; 
-    color: #14d5db;
+    font-size: 12px;
+    text-align: center;
+    color: #337ab7;
 }
 
 header .header-icons-container .icons a{
@@ -93,14 +96,15 @@ header .header-icons-container .icons a{
 	color: #cccccc;
 	/*border-right: 1px #888888 solid;*/
 }
+/*elemento para crearle un efecto cada vez que se sombree */
 header .header-icons-container .icons a:hover{
 	color: #1C055B;
-	background-color: #337ab7;
+    background-color: rgb(3, 18, 32);
 }
 
 header .icons span {
-    color: #429bee;
-}º
+    color: #337ab7;
+}
 .menus{
 	list-style: none;
 	margin: 0;

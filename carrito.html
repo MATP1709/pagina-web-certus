@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/stylefh.css">
     <link rel="stylesheet" href="css/font/flaticon.css">
-
+    <link rel="stylesheet" href="css/productos.css">
+ 
 
 </head>
 <body >   
@@ -34,7 +35,7 @@
                     <h6>Carrito</h6>
                 </div>                     
             </div>
-        </section>      
+        </section>        
         <section class="back">
             <div class="menu contenedor">                
                <a href="#" class="logo">COMPU SERVICE PERÚ</a>                                  
@@ -61,61 +62,35 @@
 
     <!--FIN DE HEADER-->
 
-    <main >
-        	
-	<section  >		
-        <div class="container">
-			<h2>Contáctenos</h2>
-			<div class="row">
-				<div class="col">
-					
-					<form id="form" class="form-empresa">
-						<div>
-							<input type="text"  id="nombre" name="nombre" placeholder="Nombre completo" >
-                            <span id="nombre_error" class="mensaje_error"></span>
-						</div>
-						<div>
-							<input type="email" id="email" name="email" placeholder="Correo electrónico" >
-                            <span id="email_error" class="mensaje_error"></span>
-						</div> 
-						<div>
-							<input type="text" id="asunto" name="asunto" placeholder="Indique el Asunto" >
-                            <span id="asunto_error" class="mensaje_error"></span>
-						</div>
-						<div>
-							<textarea rows="6" id="mensaje" name="mensaje" placeholder="Escriba su mensaje o comentario" ></textarea>
-                            <span id="mensaje_error" class="mensaje_error"></span>
-						</div>
-						<div>
-                            <input type="submit" id="button" class="enviar" value="Enviar mensaje" >							                            
-						</div>
-					</form>
+    <main >        		
+        
+        <section class="carrito">    
+            <h2>Mi carrito</h2>
+            
+            <table class="table table-striped table-dark">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Imagen</th>
+                        <th>Cantidad</th>
+                        <th>precio</th>
+                        <th>Total</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="Producto-list">
+    
+                </tbody>
+            </table>
+
+        </section>
 
 
-					
-				</div><!-- col -->
-				<div class="col">
-					
-					<div class="videoWrapper">
-					<iframe width="560" height="340" src="video/compluplaza.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					</div>
-				</div><!-- col -->
-			</div><!-- row -->
-			
-			
-			<ul class="info-contacto">
-						<li><i class="fas fa-map-marker-alt"></i> Av. Garcilaso de la Vega 1253-Lima 15001, Perú</li>						
-						<li><i class="fas fa-phone"></i> (051)-985511370 </li>
-                        <li><i class="fas fa-envelope"></i> contacto@compuserviceperu.com</li>
-                        <li><i class="fa fa-globe"></i> www.compuserviceperu.com</li>
-			</ul>			
+	    <div class="whatsapp-boton">
+            <a href="https://wa.me/941349964?text=Este%20es%20el%20exámen%20final%20CERTUS" target="_blank">
+                <img class="whatsappboton" src="img/icono.png" alt="">
+            </a>
         </div>
-	</section><!-- contactenos -->
-    <div class="whatsapp-boton">
-        <a href="https://wa.me/941349964?text=Este%20es%20el%20exámen%20final%20CERTUS" target="_blank">
-            <img class="whatsappboton" src="img/icono.png" alt="">
-        </a>
-    </div>
     </main>
     <!--INICIO DE FOOTER-->
     <footer class="pie-pagina"> <!--Encapsulamos todo lo que se pondra en el footer-->
@@ -165,13 +140,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-
-        
-        <script type="text/javascript"  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-        <script type="text/javascript">  emailjs.init('YSWFMR3JAQ6qEVV2V')             </script>
-
-        <script src="js/contactenosvalidacion.js"></script>   
+    
+    <script src="js/listarCarrito.js"></script>
+    
 </body>
 
 </html>

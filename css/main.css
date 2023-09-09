@@ -59,7 +59,6 @@ header .header-icons-container {
         rgba(36, 48, 60) 25%,
         rgb(30, 55, 82) 73%);
 }
-
 header .header-icons-container .icons {    
     width: 200px;
     height: auto;
@@ -74,7 +73,7 @@ header .header-icons-container .icons {
 
 header .header-icons-container .icons h6 {    
     background-color: var(--dark2);    
-    text-align: center;
+    text-align: center ;
     border-radius: 5px;    
     padding: 5px 0;    
     font-size: 1.1rem;   
@@ -86,9 +85,7 @@ header .header-icons-container .icons h6 {
 .icons>div:hover h6 { 
     transform: translate(0px, 0px);
     opacity: 1; 
-    font-size: 12px;
-    text-align: center;
-    color: #337ab7;
+    color: #14d5db;
 }
 
 header .header-icons-container .icons a{
@@ -96,15 +93,14 @@ header .header-icons-container .icons a{
 	color: #cccccc;
 	/*border-right: 1px #888888 solid;*/
 }
-/*elemento para crearle un efecto cada vez que se sombree */
 header .header-icons-container .icons a:hover{
 	color: #1C055B;
-    background-color: rgb(3, 18, 32);
+	background-color: #337ab7;
 }
 
 header .icons span {
-    color: #337ab7;
-}
+    color: #429bee;
+}º
 .menus{
 	list-style: none;
 	margin: 0;
@@ -219,11 +215,11 @@ nav .navbar a:hover{
     margin-top:auto;
 	margin-left:auto;
 	margin-right:auto;
-	padding:0 15px;    
+	padding:0 15px;        
     background: linear-gradient(
-        90deg,
-        rgb(13,79,151,1.000) 5%,
-        rgb(13,79,151,1.000) 93%);
+            90deg,
+            rgba(36, 48, 60) 25%,
+            rgb(30, 55, 82) 73%);
     color: #e6e9ed;
     border:solid 1px #429bee;
 }
@@ -396,7 +392,10 @@ aside{
 html, body {
     font-family:Verdana, Geneva, sans-serif;
     font-weight:bold;
-    background-color:#004085;
+    background: linear-gradient(
+        90deg,
+        rgba(36, 48, 60) 25%,
+        rgb(30, 55, 82) 73%);
     }
 
 section,aside,article,nav

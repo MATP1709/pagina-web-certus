@@ -12,12 +12,15 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/stylefh.css">
+    <link rel="stylesheet" href="css/registro.css">
     <link rel="stylesheet" href="css/font/flaticon.css">
+
+
 </head>
 <body >   
 
     <header class="encabezado-pagina"> 
-        <section class="header-icons-container">
+        <section class="header-icons-container">  
             <div class="icons">
                 <div>  
                     <a href="registro.html"><span class="fa fa-pencil-square-o"></span></a>  
@@ -28,11 +31,11 @@
                     <h6 >Ingresar</h6>
                 </div>
                 <div>   
-                    <a href="#"><span class="fa fa-cart-arrow-down"></span></a> 
+                    <a href="carrito.html"><span class="fa fa-cart-arrow-down"></span></a> 
                     <h6>Carrito</h6>
                 </div>                     
             </div>
-        </section>        
+        </section>      
         <section class="back">
             <div class="menu contenedor">                
                <a href="#" class="logo">COMPU SERVICE PERÚ</a>                                  
@@ -46,6 +49,7 @@
                         <li><a href="index.html"><span class="fa fa-home text-info"></span> Inicio</a></li>  
                         <li><a href="AcercaDeNosotros.html"><span class="fa fa-users text-warning"></span> Nosotros</a></li>
                         <li><a href="servicios.html"><span class="fa fa-gear text-success"></span> Servicios</a></li>
+                        <li><a href="productos.html"><span class="fa fa-circle text-primary"></span> Productos</a></li>
                         <li><a href="contactenos.html"><span class="fa fa-envelope text-warning"></span> Contáctenos</a></li>
                         <li><a href="ubicacion.html"><span class="fa fa-map-marker text-info bg-dark"></span> Ubícanos</a></li>
                     </ul>
@@ -60,70 +64,38 @@
 
     <main >        	
 
-        <section  >		
-            <div class="container">
-                <h2>Bienvenido, por favor inicie sesión!</h2>        
-            
-                <div class="row">
-                    <div class="col">
-                        <div class="titulonosotros"><strong>Nuevo Cliente</strong></div>
-                        <div class="row">
-                        <div class="aviso">Al crear una cuenta en nuestro sitio web, podrá comprar
-                            más rápido, estar actualizado sobre el estado de un pedido y realizar un seguimiento de los pedidos que
-                            haber ha realizado previamente.</div>
-                        </div>    
-                        <br>
-                        <br>
-                        <div class="row">
-                            <div class="col"></div>    
-                            <div class="col"><button  style="border-radius: 15%;"  type="button" id="register" class="btn-primary" 
-                                onclick="location.href='registro.html'"
-                                >Registrese</button></div>    
-                            <div class="col"></div>    
-                        </div>
+   <form id="formulario" class="form-register">
+            <h4>Iniciar Sección</h4>
 
-                        
-
-                    </div><!-- col -->
-                    <div class="col">              
-                        <form id="form" class="form-empresa" method="post" action="carrito.html"  >
-                            <div class="titulonosotros"><strong>Soy Cliente</strong></div>
-                            
-                            <div class="row" style="padding-right: 10px;">
-                                <label for="Email">Correo:</label> 
-                                <input  type="email"  id="Email" name="Email" placeholder="Correo electrónico" >                                 
-                            </div> 
-                            <div class="row" style="padding-right: 10px;">
-                                <label for="Password">Contraseña:</label> 
-                                <input type="password" id="Password" name="Password" placeholder="Contraseña" >                                 
-                            </div>
-                            <div class="row">    
-                                <div class="col" style="align-content:flex-end;" >
-                                <input type="checkbox" 
-                                        id="RememberMe" name="RememberMe" value="false" >
-                                </div>        
-                                <div class="col" style="align-content:flex-start;" >          
-                                        <label for="RememberMe">¿Recuérdame?</label>
-                                </div>                                    
-                                <div class="col">
-                                    <span class="forgot-password"> <a href="recuperapassword.html">Olvidó ¿contraseña?</a> </span>
-                                </div>    
-                            </div>    
-                            <span id="mensaje_error" class="mensaje_error"></span>
-                            <div class="row" >
-                                <div class="col"></div>    
-                                <div class="col"style="padding:10px; margin: 10px;" ><button style="border-radius: 15%;" type="submit" id="iniciar" class="btn-primary"   > Inicia sesión </button></div>    
-                                <div class="col"></div>    
-                            </div>
-                        </form>
-                  
-                    </div><!-- col -->
-                </div><!-- row -->
+            <!--USUARIO-->
+            <div class="formulario__grupo" id="grupo__usuario">
+                <label for="usuario" class="txtEncabezado">Usuario:</label>
+                <div>
+                    <input class="cajastxt" type="text" name="usuario" id="usuario" placeholder="Ingrese su Usuario">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+				<p class="formulario__input-error">Ingresar 4 a 16 dígitos, solo acepta números y letras</p>
             </div>
-        
+            <!--FIN USUARIO-->
 
-        </div>
-    </section><!-- Login  -->
+            <!--INICIO CONTRASEÑA-->
+			<div class="formulario__grupo" id="grupo__password">
+                <label for="password" class="txtEncabezado">Contraseña:</label>
+                <div class="formulario__grupo-input">
+                    <input class="cajastxt" type="password" name="password" id="password" placeholder="Ingrese su Contraseña">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+				<p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+            </div>
+            <!-- FIN  CONTRASEÑA-->
+
+            <!---->
+            <input type="submit" id="button" class="boton" value="Ingresar">
+            <div id="error"></div>
+            <p><a href="registro.html">¿Aun no tengo Cuenta?</a></p>
+        </form>
+     
+        
     <div class="whatsapp-boton">
         <a href="https://wa.me/941349964?text=Este%20es%20el%20exámen%20final%20CERTUS" target="_blank">
             <img class="whatsappboton" src="img/icono.png" alt="">

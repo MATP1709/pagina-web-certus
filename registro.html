@@ -2,23 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>COMPUSERVICEPERÚ</title>
+
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/stylefh.css">
         <link rel="stylesheet" href="css/registro.css">
-         <link rel="stylesheet" href="css/font/flaticon.css">
     <title>COMPUSERVICEPERÚ</title>
 </head>
 <body>
     <header class="encabezado-pagina"> 
-        <section class="header-icons-container">
+        <section class="header-icons-container">  
             <div class="icons">
                 <div>  
                     <a href="registro.html"><span class="fa fa-pencil-square-o"></span></a>  
@@ -29,11 +28,11 @@
                     <h6 >Ingresar</h6>
                 </div>
                 <div>   
-                    <a href="#"><span class="fa fa-cart-arrow-down"></span></a> 
+                    <a href="carrito.html"><span class="fa fa-cart-arrow-down"></span></a> 
                     <h6>Carrito</h6>
                 </div>                     
             </div>
-        </section>        
+        </section>       
         <section class="back">
             <div class="menu contenedor">                
                <a href="#" class="logo">COMPU SERVICE PERÚ</a>                                  
@@ -47,48 +46,104 @@
                         <li><a href="index.html"><span class="fa fa-home text-info"></span> Inicio</a></li>  
                         <li><a href="AcercaDeNosotros.html"><span class="fa fa-users text-warning"></span> Nosotros</a></li>
                         <li><a href="servicios.html"><span class="fa fa-gear text-success"></span> Servicios</a></li>
+                        <li><a href="productos.html"><span class="fa fa-circle text-primary"></span> Productos</a></li>
                         <li><a href="contactenos.html"><span class="fa fa-envelope text-warning"></span> Contáctenos</a></li>
                         <li><a href="ubicacion.html"><span class="fa fa-map-marker text-info bg-dark"></span> Ubícanos</a></li>
                     </ul>
                 </nav>
-                
             </div>
         </section>
+        
     </header>
 
     <main>
-        <form action="enviar.php" class="form-register" method="post" onsubmit="return validarFormulario()" >
+        <form id="formulario" class="form-register">
             <h4>Formulario de Registro</h4>
-            <label for="txtNombre" class="txtEncabezado">Nombre:</label>
-            <input class="cajastxt" type="text" id="txtNombre" placeholder="Ingrese su Nombre">
+            <!--Nombre-->
+            <div class="formulario__grupo" id="grupo__nombre">
+                <label for="nombres" class="txtEncabezado">Nombre:</label>
+                <div class="formulario__grupo-input">
+                    <input class="cajastxt" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre Completo">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+				<p class="formulario__input-error">Ingresar 4 a 40 dígitos y solo acepta letras.</p> 
+            </div>
+
+            <!--Email-->
+            <div class="formulario__grupo" id="grupo__correo">
+                <label for="email" class="txtEncabezado">Email:</label>
+                <div class="formulario__grupo-input">
+                    <input class="cajastxt" type="email" name="email" id="email" placeholder="Ingrese su Correo Electrónico">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+				<p class="formulario__input-error">Correo incorrecto. Ejemplo:  correo@correo.com</p>
+            </div>
             
-            <label for="txtApellido"class="txtEncabezado">Apellido:</label>
-            <input class="cajastxt" type="text" id="txtApellido" placeholder="Ingrese su Apellido">
+            <!--FECHA DE NACIMIENTO-->
+            <div class="formulario__grupo" id="grupo__fecha">    
+                <label for="fecha" class="txtEncabezado">Fecha de nacimiento:</label>
+                <div class="formulario__grupo-input">
+                    <input class="cajastxt" type="date" name="fecha" id="fecha">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>                   
+                </div>
+				<p class="formulario__input-error">La fecha es incorrecta.</p>
+            </div>
+            <!--FIN FECHA DE NACIMIENTO-->
+
+            <!--USUARIO-->
+            <div class="formulario__grupo" id="grupo__usuario">
+                <label for="usuario" class="txtEncabezado">Usuario:</label>
+                <div>
+                    <input class="cajastxt" type="text" name="usuario" id="usuario" placeholder="Ingrese su Usuario">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+				<p class="formulario__input-error">Ingresar 4 a 16 dígitos, solo acepta números y letras</p>
+            </div>
+            <!--FIN USUARIO-->
+
+            <!--INICIO CONTRASEÑA-->
+			<div class="formulario__grupo" id="grupo__password">
+                <label for="password" class="txtEncabezado">Contraseña:</label>
+                <div class="formulario__grupo-input">
+                    <input class="cajastxt" type="password" name="password" id="password" placeholder="Ingrese su Contraseña">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+				<p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+            </div>
+            <!-- FIN  CONTRASEÑA-->
+
+            <!-- INICIO  CONTRASEÑA 2-->
+			<div class="formulario__grupo" id="grupo__password2">
+                <label for="password2" class="txtEncabezado">Repetir Contraseña:</label>
+                <div class="formulario__grupo-input">
+                    <input class="cajastxt" type="password" name="password2" id="password2" placeholder="Repetir Contraseña">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+				<p class="formulario__input-error">La contraseña no es igual.</p>
+            </div>
+            <!-- FIN  CONTRASEÑA 2-->
             
-            <label for="dateFN" class="txtEncabezado">Fecha de nacimiento:</label>
-            <input type="date" class="fecha" id="dateFN">
-            
-            <label for="Email" class="txtEncabezado">Email:</label>
-            <input class="cajastxt" type="email" id="Email" placeholder="Ingrese su Correo Electrónico">
-            
-            <label for="txtPassword" class="txtEncabezado">Contraseña:</label>
-            <input class="cajastxt" type="password" id="txtPassword" placeholder="Ingrese su Contraseña">
+            <!--Para indicar que el formulario no se ingreso correctamente-->
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><b>Error:</b> Por favor rellena el formulario correctamente. </p>
+			</div>
             
             <!--<p> Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>-->
             <!--btn para terminos y condiciones-->
             <div>
                 <div class="boton-switch">
                     <p>
-                        <input type="checkbox" id="btn-switch">
-                        <label for="btn-switch" class="lbl-switch"></label>
-                        Estoy de acuerdo con<a href="#" class="terminos">Terminos y Condiciones</a>
+                        <input type="checkbox" id="terminos">
+                        <label for="terminos" class="lbl-switch"></label>
+                        Estoy de acuerdo con<a href="#">Terminos y Condiciones</a>
                     </p>
                 </div>
             </div>
-
-            <!--btn hace envio de formulario por el type="submit"-->
-            <input class="boton" type="submit" value="Registrar">
-            <p><a href="login.html" class="terminos">¿Ya tengo Cuenta?</a></p>
+            <!--boton de registrar-->
+            <button type="submit" id="button" class="boton">Registrar</button>
+            <p><a href="login.html">¿Ya tengo Cuenta?</a></p>
+            <!-- mensaje de que se envio correctamente-->
+			<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
         </form>
 
         <div class="whatsapp-boton">
@@ -124,12 +179,16 @@
                     <a href="video/compluplaza.mp4" target="_blank" ><span class="fab fa-youtube"></span></a>
                 </div>
             </div>  
+    
+    
+    
+    
         </div>
         <div class="grupo-2">
             <small>&copy; 2023 <b>COMPUSERVICEPERÚ</b> - Todos los Derechos Reservados</small>
         </div>
     </footer>
     <!--Llamos al js registro-->
-    <script async type="text/javascript" src="../js/registro.js"></script>
+    <script src="js/registro.js"></script>
 </body>
 </html>

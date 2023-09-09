@@ -1,7 +1,10 @@
 html, body {
 	font-family:Verdana, Geneva, sans-serif;
 	font-weight:bold;
-	background-color:#082880;
+	background: linear-gradient(
+		90deg,
+		rgba(36, 48, 60) 25%,
+		rgb(30, 55, 82) 73%);
 	}
 
 header,section,footer,aside,article,nav
@@ -24,7 +27,10 @@ nav{
 
 section{
 	float:right;
-   background-color:#397ebe;
+	background: linear-gradient(
+		90deg,
+		rgba(36, 48, 60) 25%,
+		rgb(30, 55, 82) 73%);
    border-radius: 15px ;
 	width:78%;
 	color:#FFF;
